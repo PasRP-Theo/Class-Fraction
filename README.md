@@ -1,3 +1,3 @@
 # Class-Fraction
 
-Le code etait dans le wiki
+Le script se trouve aussi dans le wiki
