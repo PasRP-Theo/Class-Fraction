@@ -1,3 +1,5 @@
+from math import gcd
+
 class Fraction:
     """Class representing a fraction and operations on it
 
@@ -32,6 +34,7 @@ class Fraction:
         POST : retourne une string de la partie int + reste/ den
         """
 
+
     # ------------------ Operators overloading ------------------
 
     def __add__(self, other):
@@ -39,7 +42,7 @@ class Fraction:
 
          PRE : other est une instance de la classe
          POST : retourne la somme de deux fractions
-         RAISES :
+///         RAISES : TypeError si other n'est pas une fraction
          """
 
     def __sub__(self, other):
@@ -58,12 +61,22 @@ class Fraction:
         RAISES :
         """
 
+    def __truediv__(self, other):
+        """Overloading of the / operator for fractions
+
+        PRE : other est une instance de la classe
+        POST : retourne le queotient de deux franctions
+///        RAISES : -TypeError si other n'est pas une fraction
+                    -si le num de other est egal a 0 ZeroDivisionError
+        """
+
     def __pow__(self, other):
         """Overloading of the ** operator for fractions
 
         PRE : other est une instance de la classe
         POST : retourne la puissance de deux franctions
-        RAISES :
+///        RAISES : -TypeError si other n'est pas une fraction
+                    -si la de den est negatif et l'exposant est fractionnait alors ValueError
         """
 
     def __eq__(self, other):

@@ -71,7 +71,7 @@ class Fraction:
 
          PRE : other est une instance de la classe
          POST : retourne la somme de deux fractions
-         RAISES :
+///         RAISES : TypeError si other n'est pas une fraction
          """
         if not isinstance(other, Fraction):
             raise TypeError("peut ajouter que deux intances de la fraction.")
@@ -113,7 +113,8 @@ class Fraction:
 
         PRE : other est une instance de la classe
         POST : retourne le queotient de deux franctions
-        RAISES :
+///        RAISES : -TypeError si other n'est pas une fraction
+                    -si le num de other est egal a 0 ZeroDivisionError
         """
         if not isinstance(other, Fraction):
             raise TypeError("peut diviser que deux intances de la fraction.")
@@ -130,7 +131,8 @@ class Fraction:
 
         PRE : other est une instance de la classe
         POST : retourne la puissance de deux franctions
-        RAISES :
+///        RAISES : -TypeError si other n'est pas une fraction
+                    -si la de den est negatif et l'exposant est fractionnait alors ValueError
         """
         if not isinstance(other, Fraction):
             raise TypeError("la fraction doit avoir deux instance.")
